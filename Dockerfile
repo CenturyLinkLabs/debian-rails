@@ -6,7 +6,7 @@ MAINTAINER CenturyLink Labs <innovationlabs@ctl.io>
 RUN apt-get update && curl --silent --location https://deb.nodesource.com/setup_0.12 | bash - && apt-get install -y nodejs --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
 # see http://guides.rubyonrails.org/command_line.html#rails-dbconsole
-RUN apt-get update && apt-get install -y mysql-client postgresql-client sqlite3 --no-install-recommends && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y mysql-client postgresql-client libsqlite3-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
 ENV RAILS_VERSION 4.2.3
 
